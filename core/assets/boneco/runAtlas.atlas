@@ -1,0 +1,61 @@
+runAtlas.png
+size: 1923, 1626
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+run1
+  rotate: false
+  xy: 0, 0
+  size: 641, 542
+  orig: 641, 542
+  offset: 0, 0
+  index: -1
+run2
+  rotate: false
+  xy: 641, 0
+  size: 641, 542
+  orig: 641, 542
+  offset: 0, 0
+  index: -1
+run3
+  rotate: false
+  xy: 1282, 0
+  size: 641, 542
+  orig: 641, 542
+  offset: 0, 0
+  index: -1
+run4
+  rotate: false
+  xy: 0, 542
+  size: 641, 542
+  orig: 641, 542
+  offset: 0, 0
+  index: -1
+run5
+  rotate: false
+  xy: 641, 542
+  size: 641, 542
+  orig: 641, 542
+  offset: 0, 0
+  index: -1
+run6
+  rotate: false
+  xy: 1282, 542
+  size: 641, 542
+  orig: 641, 542
+  offset: 0, 0
+  index: -1
+run7
+  rotate: false
+  xy: 0, 1084
+  size: 641, 542
+  orig: 641, 542
+  offset: 0, 0
+  index: -1
+run8
+  rotate: false
+  xy: 641, 1084
+  size: 641, 542
+  orig: 641, 542
+  offset: 0, 0
+  index: -1
