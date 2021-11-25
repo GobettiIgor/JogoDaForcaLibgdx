@@ -50,7 +50,8 @@ public class TelaInicial implements Screen {
         assetManager.load("ForcaSemFundo1.jpg", Texture.class);
         assetManager.load("desativarSomGeral.png", Texture.class);
         assetManager.load("desativarEfeitosSonoros.png", Texture.class);
-        assetManager.load("boneco/idleCerto.png", Texture.class);
+        assetManager.load("boneco/idle.png", Texture.class);
+        assetManager.load("boneco/run8.png", Texture.class);
 
         assetManager.finishLoading();
     }
