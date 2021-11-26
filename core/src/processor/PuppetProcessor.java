@@ -3,7 +3,7 @@ package processor;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.InputAdapter;
 
-public class BonecoProcessor extends InputAdapter {
+public class PuppetProcessor extends InputAdapter {
     public boolean wPress;
     public boolean sPress;
 

@@ -51,7 +51,8 @@ public class TelaInicial implements Screen {
         assetManager.load("desativarSomGeral.png", Texture.class);
         assetManager.load("desativarEfeitosSonoros.png", Texture.class);
         assetManager.load("boneco/idle.png", Texture.class);
-        assetManager.load("boneco/run8.png", Texture.class);
+        assetManager.load("boneco/run.png", Texture.class);
+        assetManager.load("boneco/shoot.png", Texture.class);
 
         assetManager.finishLoading();
     }
