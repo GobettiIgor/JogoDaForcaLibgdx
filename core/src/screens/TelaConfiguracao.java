@@ -1,4 +1,4 @@
-package telas;
+package screens;
 
 import com.badlogic.gdx.Screen;
 

@@ -1,4 +1,4 @@
-package telas;
+package screens;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
@@ -8,16 +8,11 @@ import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.badlogic.gdx.scenes.scene2d.Stage;
-import com.badlogic.gdx.scenes.scene2d.ui.Skin;
-import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.utils.ScreenUtils;
-import com.mygdx.game.ControladorClickMenu;
-import sprite.Forca;
-import sprite.FundoForca;
+import game.ControllerClickMenu;
+import sprite.Hangman;
 
-public class TelaInicial implements Screen {
+public class InitialScreen implements Screen {
     SpriteBatch spriteBatch;
     public static AssetManager assetManager;
 
@@ -31,11 +26,11 @@ public class TelaInicial implements Screen {
     private Texture desativarSomGeral; // botão
     private Texture desativarEfeitosSonoros; // botão
 
-    private static Game jogo;
+    private static Game game;
 
-    public TelaInicial(Game jogo) {
-        this.jogo = jogo;
-        ControladorClickMenu.init();
+    public InitialScreen(Game game) {
+        this.game = game;
+        ControllerClickMenu.init();
     }
 
     public void carregaAssets() {
@@ -50,9 +45,11 @@ public class TelaInicial implements Screen {
         assetManager.load("ForcaSemFundo1.jpg", Texture.class);
         assetManager.load("desativarSomGeral.png", Texture.class);
         assetManager.load("desativarEfeitosSonoros.png", Texture.class);
-        assetManager.load("boneco/idle.png", Texture.class);
-        assetManager.load("boneco/run.png", Texture.class);
-        assetManager.load("boneco/shoot.png", Texture.class);
+        assetManager.load("puppet/idle.png", Texture.class);
+        assetManager.load("puppet/run.png", Texture.class);
+        assetManager.load("puppet/shoot.png", Texture.class);
+        assetManager.load("game/box.png", Texture.class);
+        assetManager.load("fonts/font.fnt", BitmapFont.class);
 
         assetManager.finishLoading();
     }
@@ -88,14 +85,14 @@ public class TelaInicial implements Screen {
         Gdx.graphics.setTitle(Gdx.graphics.getFramesPerSecond() + " ");
 
         if(Gdx.input.isTouched()) {
-            if (ControladorClickMenu.click.equals("INICIAR")) {
+            if (ControllerClickMenu.click.equals("INICIAR")) {
                 musicaPrincipal.stop();
 
-                jogo.setScreen(new Forca());
+                game.setScreen(new Hangman());
                 //dispose(); // Onde chamo o dispose antes de iniciar a outra tela?? Porque a próxima tela instancia um novo SpriteBatch
 
-            } else if (ControladorClickMenu.click.equals("CONFIGURACAO")) {
-                jogo.setScreen(new TelaConfiguracao());
+            } else if (ControllerClickMenu.click.equals("CONFIGURACAO")) {
+                game.setScreen(new TelaConfiguracao());
                 //System.out.println(ControladorClickMenu.click);
             }
         }

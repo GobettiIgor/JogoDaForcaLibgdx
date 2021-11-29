@@ -1,14 +1,14 @@
-package com.mygdx.game;
+package game;
 
 import com.badlogic.gdx.InputAdapter;
 import com.badlogic.gdx.InputProcessor;
 
-public abstract class ControladorClickMenu {
-    private static InputProcessor processadorClickMenu;
+public abstract class ControllerClickMenu {
+    private static InputProcessor processorClickMenu;
     public static String click;
 
     public static void init(){
-        processadorClickMenu = new InputAdapter(){
+        processorClickMenu = new InputAdapter(){
             @Override
             public boolean touchDown(int screenX, int screenY, int pointer, int button) {
                 if(screenX >= 260 && screenX <= 470  && screenY >= 213 && screenY <= 280){
@@ -20,6 +20,6 @@ public abstract class ControladorClickMenu {
                 return false;
             }
         };
-        JogoDaForca.adicionarInputProcessor(processadorClickMenu);
+        HangmanGame.addInputProcessor(processorClickMenu);
     }
 }

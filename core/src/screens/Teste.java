@@ -1,4 +1,4 @@
-package telas;
+package screens;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
@@ -12,7 +12,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
-import com.mygdx.game.ControladorClickMenu;
+import game.ControllerClickMenu;
 
 public class Teste implements Screen{
 
@@ -24,7 +24,7 @@ public class Teste implements Screen{
 
     public Teste(Game jogo) {
         this.jogo = jogo;
-        ControladorClickMenu.init();
+        ControllerClickMenu.init();
     }
 
     @Override

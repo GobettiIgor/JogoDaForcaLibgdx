@@ -1,12 +1,12 @@
-package com.mygdx.game;
+package game;
 
 import com.badlogic.gdx.*;
-import telas.TelaInicial;
+import screens.InitialScreen;
 
-public class JogoDaForca extends Game {
+public class HangmanGame extends Game {
 	public static InputMultiplexer multiplexer;
 
-	public static void adicionarInputProcessor(InputProcessor inputProcessor){
+	public static void addInputProcessor(InputProcessor inputProcessor){
 		if(multiplexer == null){
 			multiplexer = new InputMultiplexer();
 			Gdx.input.setInputProcessor(multiplexer);
@@ -16,7 +16,7 @@ public class JogoDaForca extends Game {
 
 	@Override
 	public void create() {
-		this.setScreen( new TelaInicial(this));
+		this.setScreen( new InitialScreen(this));
 	}
 
 	@Override

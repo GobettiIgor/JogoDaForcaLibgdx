@@ -4,9 +4,9 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.*;
 import processor.BulletProcessor;
 import processor.PuppetProcessor;
-import telas.TelaInicial;
+import screens.InitialScreen;
 
-public class Boneco extends Sprite{
+public class Puppet extends Sprite{
     private PuppetProcessor puppetProcessor;
     private BulletProcessor bulletProcessor;
     private float elapsedTime;
@@ -15,16 +15,16 @@ public class Boneco extends Sprite{
     Texture textureRun;
     Texture textureShoot;
 
-    public Boneco(){
-        super(TelaInicial.assetManager.get("boneco/idle.png",Texture.class));
-        textureIdle = TelaInicial.assetManager.get("boneco/idle.png", Texture.class);
-        textureRun = TelaInicial.assetManager.get("boneco/run.png", Texture.class);
-        textureShoot = TelaInicial.assetManager.get("boneco/shoot.png", Texture.class);
+    public Puppet(){
+        super(InitialScreen.assetManager.get("puppet/idle.png",Texture.class));
+        textureIdle = InitialScreen.assetManager.get("puppet/idle.png", Texture.class);
+        textureRun = InitialScreen.assetManager.get("puppet/run.png", Texture.class);
+        textureShoot = InitialScreen.assetManager.get("puppet/shoot.png", Texture.class);
 
         puppetProcessor = new PuppetProcessor();
         bulletProcessor = new BulletProcessor();
-        Forca.adicionarInputProcessor(puppetProcessor);
-        Forca.adicionarInputProcessor(bulletProcessor);
+        Hangman.addInputProcessor(puppetProcessor);
+        Hangman.addInputProcessor(bulletProcessor);
 
         this.setPosition(5,18);
     }
