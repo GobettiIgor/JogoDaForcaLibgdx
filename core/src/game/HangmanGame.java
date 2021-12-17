@@ -2,9 +2,11 @@ package game;
 
 import com.badlogic.gdx.*;
 import screens.InitialScreen;
+import screens.Teste;
 
 public class HangmanGame extends Game {
 	public static InputMultiplexer multiplexer;
+	public static HangmanGame hangmanGame;
 
 	public static void addInputProcessor(InputProcessor inputProcessor){
 		if(multiplexer == null){
@@ -17,6 +19,7 @@ public class HangmanGame extends Game {
 	@Override
 	public void create() {
 		this.setScreen( new InitialScreen(this));
+		hangmanGame = this;
 	}
 
 	@Override

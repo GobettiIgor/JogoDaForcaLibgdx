@@ -13,6 +13,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
 import game.ControllerClickMenu;
+import game.HangmanGame;
 
 public class Teste implements Screen{
 
@@ -30,7 +31,7 @@ public class Teste implements Screen{
     @Override
     public void show() {
         stage = new Stage(new ScreenViewport());
-        Gdx.input.setInputProcessor(stage);
+        HangmanGame.addInputProcessor(stage);
 
         int Help_Guides = 12;
         int row_height = Gdx.graphics.getWidth() / 12;

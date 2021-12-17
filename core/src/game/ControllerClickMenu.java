@@ -11,10 +11,10 @@ public abstract class ControllerClickMenu {
         processorClickMenu = new InputAdapter(){
             @Override
             public boolean touchDown(int screenX, int screenY, int pointer, int button) {
-                if(screenX >= 260 && screenX <= 470  && screenY >= 213 && screenY <= 280){
+                if(screenX >= 560 && screenX <= 730  && screenY >= 435 && screenY <= 497){
                     click = "INICIAR";
                 }
-                else if(screenX >= 260 && screenX <= 560  && screenY >= 313 && screenY <= 380){
+                else if(screenX >= 560 && screenX <= 820  && screenY >= 533 && screenY <= 600){
                     click = "CONFIGURACAO";
                 }
                 return false;

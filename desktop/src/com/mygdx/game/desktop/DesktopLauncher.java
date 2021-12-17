@@ -9,6 +9,8 @@ import game.HangmanGame;
 public class DesktopLauncher {
 	public static void main (String[] arg) {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
+		config.height = 800;
+		config.width = 1200;
 		config.title = "Hangman Game with LibGDX";
 		config.pauseWhenBackground = true;
 		config.pauseWhenMinimized = true;

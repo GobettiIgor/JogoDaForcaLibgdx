@@ -8,16 +8,16 @@ INSTRUMENTO MUSICAL
 COMIDA
  */
 public enum PossibleWords {
-    MELANCIA("FRUTA"),
-    AREIA("CONSTRUÇÃO CIVIL"),
-    COMPUTADOR("INFORMÁTICA"),
-    UVA("FRUTA"),
-    TIJOLO("CONSTRUÇÃO CIVIL"),
-    POLENTA("COMIDA"),
-    SERVIDOR("INFORMÁTICA"),
-    CRAVIOLA("INSTRUMENTO MUSICAL"),
-    CUSCUZ("COMIDA"),
-    CAVAQUINHO("INSTRUMENTO MUSICAL");
+    melancia("FRUTA"),
+    areia("CONSTRUCAO CIVIL"),
+    computador("INFORMATICA"),
+    uva("FRUTA"),
+    tijolo("CONSTRUCAO CIVIL"),
+    polenta("COMIDA"),
+    servidor("INFORMATICA"),
+    craviola("INSTRUMENTO MUSICAL"),
+    cuscuz("COMIDA"),
+    cavaquinho("INSTRUMENTO MUSICAL");
 
     private String description;
 

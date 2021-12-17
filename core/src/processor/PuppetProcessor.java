@@ -4,28 +4,33 @@ import com.badlogic.gdx.Input;
 import com.badlogic.gdx.InputAdapter;
 
 public class PuppetProcessor extends InputAdapter {
-    public boolean wPress;
-    public boolean sPress;
+    public boolean upPress;
+    public boolean downPress;
 
     @Override
     public boolean keyDown(int keycode) {
-        if(keycode == Input.Keys.W){
-            wPress = true;
+        if(keycode == Input.Keys.UP){
+            upPress = true;
         }
-        else if(keycode == Input.Keys.S){
-            sPress = true;
+        else if(keycode == Input.Keys.DOWN){
+            downPress = true;
         }
         return false;
     }
 
     @Override
     public boolean keyUp(int keycode) {
-        if(keycode == Input.Keys.W){
-            wPress = false;
+        if(keycode == Input.Keys.UP){
+            upPress = false;
         }
-        else if(keycode == Input.Keys.S){
-            sPress = false;
+        else if(keycode == Input.Keys.DOWN){
+            downPress = false;
         }
+        return false;
+    }
+
+    @Override
+    public boolean keyTyped(char character) {
         return false;
     }
 }

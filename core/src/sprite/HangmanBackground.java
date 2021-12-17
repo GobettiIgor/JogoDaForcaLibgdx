@@ -9,7 +9,7 @@ import screens.InitialScreen;
 public class HangmanBackground extends Sprite{
 
     public HangmanBackground(){
-        super(InitialScreen.assetManager.get("ForcaSemFundo1.jpg", Texture.class));
+        super(InitialScreen.assetManager.get("ForcaSemFundo.jpg", Texture.class));
     }
 
     public void draw(SpriteBatch batch){
